@@ -1,0 +1,3 @@
+.o-two-columns { display: flex; }
+
+.o-two-columns__column { width: 50%; }

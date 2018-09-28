@@ -1,0 +1,18 @@
+.c-header { 
+  padding: 50px 0;
+  background-color: #1991ff;
+  color: #fff;
+}
+
+.c-header__main {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.c-header__secondary {
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 300;
+  font-size: 28px;
+}

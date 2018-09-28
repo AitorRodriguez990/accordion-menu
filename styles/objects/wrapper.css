@@ -1,0 +1,15 @@
+.o-wrapper {
+  height: 100vh
+}
+
+.o-wrapper__content {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.o-wrapper__content--main { 
+  min-height: calc(100vh - 383px);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
