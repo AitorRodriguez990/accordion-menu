@@ -6,6 +6,8 @@
   max-width: 1024px;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .o-wrapper__content--main { 
