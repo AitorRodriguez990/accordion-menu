@@ -29,9 +29,13 @@
 .c-accordion__description {
   box-sizing: border-box;
   margin-left: 0;
-  padding: 20px 15px;
+  padding: 10px 15px;
   background-color: #f6f6f6;
   line-height: 1.7;
+}
+
+.c-accordion__description__content {
+  margin: 10px 0;
 }
 
 .c-accordion__title:last-of-type:not(.c-accordion__title--active),
