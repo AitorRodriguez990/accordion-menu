@@ -1,3 +1,6 @@
+import '../styles/main.scss';
+import '../styles/normalize.css';
+
 const ACCORDION_TITLE = "c-accordion__title",
       ACCORDION_TITLE_ACTIVE = "c-accordion__title--active",
       HEADER = "c-header";
@@ -19,11 +22,11 @@ const ACCORDION_TITLE = "c-accordion__title",
 
     // Change header color depending on accordion title color
     changeHeaderColor(e.currentTarget);
-  }
+  };
   
   // Assign click function to all elements
   accordionElements.forEach(element => {
-    element.addEventListener("click", handleClickAccordionElement)
+    element.addEventListener("click", handleClickAccordionElement);
   });
 })();
 
@@ -41,4 +44,4 @@ const changeHeaderColor = () => {
 // Helper function to add multiple styles on element
 const setStylesOnElement = function(styles, element){
   Object.assign(element.style, styles);
-}
+};
