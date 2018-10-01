@@ -7,7 +7,7 @@ Aquí puede verse la [demostración](https://aitorrodriguez990.github.io/accordi
 * Webpack 4
 * ES6
 * Babel
-* ITCSS
+* SUITCSS
 * SASS
 
 ## Instalación
