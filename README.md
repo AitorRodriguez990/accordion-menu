@@ -12,7 +12,7 @@ Aquí puede verse la [demostración](https://aitorrodriguez990.github.io/accordi
 
 ## Instalación
 
-```bash
+```shell
 git clone https://github.com/AitorRodriguez990/accordion-menu.git
 cd accordion-menu
 npm install
