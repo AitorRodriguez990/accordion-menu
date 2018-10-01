@@ -1,9 +1,9 @@
 'use strict';
 
-const Path = require('path');
-const Webpack = require('webpack');
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
+const Path = require('path'),
+      Webpack = require('webpack'),
+      merge = require('webpack-merge'),
+      common = require('./webpack.common.js');
 
 const dest = Path.join(__dirname, '../dist');
 

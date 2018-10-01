@@ -1,14 +1,31 @@
-@import "settings/fonts";
+/**
+ * MAIN
+ *
+ * Import all style files.
+ * 
+ * Syntaxis is: @import "route/fileName"
+ */
 
-@import "elements/anchors";
+/* Base
+   ========================================================================== */
 
-@import "utilities/align";
+@import "base";
 
-@import "objects/wrapper";
-@import "objects/two-columns";
 
-@import "components/header";
+/* Utils
+   ========================================================================== */
+
+@import "utils/align";
+@import "utils/flex";
+@import "utils/height";
+@import "utils/margin";
+@import "utils/width";
+@import "utils/wrapper";
+
+
+/* Components
+   ========================================================================== */
+
 @import "components/accordion";
+@import "components/header";
 @import "components/footer";
-
-@import "generic/reset";

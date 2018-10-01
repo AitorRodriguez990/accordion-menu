@@ -1,9 +1,9 @@
 import '../styles/main.scss';
 import '../styles/normalize.css';
 
-const ACCORDION_TITLE = "c-accordion__title",
-      ACCORDION_TITLE_ACTIVE = "c-accordion__title--active",
-      HEADER = "c-header";
+const ACCORDION_TITLE = "Accordion-title",
+      ACCORDION_TITLE_ACTIVE = "is-active",
+      HEADER = "Header";
 
 (function() {
   let accordionElements = Array.from(document.querySelectorAll("." + ACCORDION_TITLE));
