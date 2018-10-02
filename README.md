@@ -9,6 +9,7 @@ Aquí puede verse la [demostración](https://aitorrodriguez990.github.io/accordi
 * Babel
 * SUITCSS
 * SASS
+* Ajax GET
 
 ## Instalación
 
