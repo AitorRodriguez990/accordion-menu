@@ -32,7 +32,7 @@ npm run dev
 npm run build
 ```
 
-### Publicar en GIT (gh-pages)
+### Publicar en GitHub (gh-pages)
 
 * Eliminar la línea `dist` del fichero `.gitignore` para que git detecte cambios en esta carpeta.
 * Añadir la carpeta y hacer commit de la carpeta dist: `git add dist && git commit -m "Publicar en producción"`.
