@@ -11,14 +11,24 @@ const ACCORDION_TITLE = "Accordion-title",
   // Remove/Add active class on target element
   const handleClickAccordionElement = (e) => {
     e.preventDefault();
+
+    // Object to control max-height property on description div
+    let newStyles = {
+      maxHeight: 0
+    };
     
-    // Remove active class from all elements
+    // Remove active class and height from all elements
     accordionElements.forEach(element => {
       element.classList.remove(ACCORDION_TITLE_ACTIVE);
+      setStylesOnElement(newStyles, element.nextElementSibling);
     });
 
-    // Add active class to selected element
+    // Change max-height value to description height
+    newStyles.maxHeight = e.currentTarget.nextElementSibling.scrollHeight + "px";
+
+    // Add active class and new height to selected element
     e.currentTarget.classList.add(ACCORDION_TITLE_ACTIVE);
+    setStylesOnElement(newStyles, e.currentTarget.nextElementSibling);
 
     // Change header color depending on accordion title color
     changeHeaderColor(e.currentTarget);

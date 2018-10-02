@@ -1,3 +1,10 @@
+/**
+ * ACCORDION
+ */
+
+/* Title
+   ========================================================================== */
+
 .Accordion-title {
   padding: 15px;
   text-transform: uppercase;
@@ -6,6 +13,9 @@
 
 .Accordion-title:first-child { border-radius: 4px 4px 0 0; }
 
+.Accordion-title:last-of-type:not(.is--active) { border-radius: 0 0 4px 4px; }
+
+/* Title modifiers */ 
 .Accordion-title--blue {
   background-color: #1991ff;
   color: #fff;
@@ -26,19 +36,18 @@
   color: #000;
 }
 
+
+/* Description
+   ========================================================================== */
+
 .Accordion-description {
   box-sizing: border-box;
+  max-height: 0;
   margin-left: 0;
-  padding: 10px 15px;
   background-color: #f6f6f6;
   line-height: 1.7;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.Accordion-title:last-of-type:not(.is--active),
 .Accordion-description:last-child { border-radius: 0 0 4px 4px; }
-
-.Accordion-title:not(.is-active) + .Accordion-description {
-  display: none;
-  max-width: 0;
-  overflow: hidden;
-} 
