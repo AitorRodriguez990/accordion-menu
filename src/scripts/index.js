@@ -1,13 +1,13 @@
 import '../styles/normalize.css';
 import '../styles/main.scss';
 
-const ACCORDION_TITLE = "Accordion-title",
-      ACCORDION_TITLE_ACTIVE = "is-active",
-      HEADER = "Header";
+const ACCORDION_TITLE = 'Accordion-title',
+      ACCORDION_TITLE_ACTIVE = 'is-active',
+      HEADER = 'Header';
 
 (function() {
-  let accordionElements = Array.from(document.querySelectorAll("." + ACCORDION_TITLE));
-
+  let accordionElements = Array.from(document.querySelectorAll('.' + ACCORDION_TITLE));
+  
   // Remove/Add active class on target element
   const handleClickAccordionElement = (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ const ACCORDION_TITLE = "Accordion-title",
     let newStyles = {
       maxHeight: 0
     };
-    
+
     // Remove active class and height from all elements
     accordionElements.forEach(element => {
       element.classList.remove(ACCORDION_TITLE_ACTIVE);
@@ -25,7 +25,7 @@ const ACCORDION_TITLE = "Accordion-title",
     });
 
     // Change max-height value to description height
-    newStyles.maxHeight = e.currentTarget.nextElementSibling.scrollHeight + "px";
+    newStyles.maxHeight = e.currentTarget.nextElementSibling.scrollHeight + 'px';
 
     // Add active class and new height to selected element
     e.currentTarget.classList.add(ACCORDION_TITLE_ACTIVE);
@@ -34,16 +34,40 @@ const ACCORDION_TITLE = "Accordion-title",
     // Change header color depending on accordion title color
     changeHeaderColor(e.currentTarget);
   };
-  
+
+  // Get Ajax Content
+  const getAjaxContent = () => {
+    let api_url = 'https://jsonplaceholder.typicode.com/comments/5';
+
+    let xhr = new XMLHttpRequest();
+        xhr.open('GET', api_url);
+        xhr.send();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          let response = xhr.response;
+          document.getElementById('AjaxContent').nextElementSibling.innerHTML = `<p>${response}</p>`;
+        } else {
+          console.log('Error: ', xhr.status);
+        }
+      }
+    };
+  };
+
   // Assign click function to all elements
-  accordionElements.forEach(element => {
-    element.addEventListener("click", handleClickAccordionElement);
+  accordionElements.forEach((element, index) => {
+    if (index === 4) {
+      getAjaxContent();
+    } 
+    
+    element.addEventListener('click', handleClickAccordionElement);
   });
 })();
 
 // Change header color depending on clicked accordion title
 const changeHeaderColor = () => {
-  let elementStyles = getComputedStyle(document.querySelector("." + ACCORDION_TITLE_ACTIVE)),
+  let elementStyles = getComputedStyle(document.querySelector('.' + ACCORDION_TITLE_ACTIVE)),
       newStyles = {
         backgroundColor: elementStyles.backgroundColor,
         color: elementStyles.color
@@ -53,6 +77,6 @@ const changeHeaderColor = () => {
 };
 
 // Helper function to add multiple styles on element
-const setStylesOnElement = function(styles, element){
+const setStylesOnElement = (styles, element) => {
   Object.assign(element.style, styles);
 };
