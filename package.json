@@ -1,7 +1,7 @@
 {
   "name": "accordion-menu",
   "version": "1.0.0",
-  "description": "Frontend exercise.",
+  "description": "Frontend exercise",
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
     "dev": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
@@ -18,7 +18,7 @@
     "javascript",
     "webdev"
   ],
-  "author": "AitorRodriguez990",
+  "author": "Aitor Rodríguez",
   "license": "",
   "bugs": {
     "url": "https://github.com/AitorRodriguez990/accordion-menu.git/issues"

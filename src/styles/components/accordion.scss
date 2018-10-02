@@ -21,7 +21,7 @@
 
 .Accordion-title--blue {
   background-color: $colorBlue;
-  color: $fontNegativeColor;
+  color: $fontColor;
 }
 
 .Accordion-title--yellow {
@@ -29,18 +29,18 @@
   color: $fontColor;
 }
 
-.Accordion-title--salmon {
-  background-color: $colorSalmon;
+.Accordion-title--red {
+  background-color: $colorRed;
   color: $fontNegativeColor;
+}
+
+.Accordion-title--gray {
+  background-color: $colorGray;
+  color: $fontColor;
 }
 
 .Accordion-title--green {
   background-color: $colorGreen;
-  color: $fontColor;
-}
-
-.Accordion-title--paleGreen {
-  background-color: $colorPaleGreen;
   color: $fontColor;
 }
 
