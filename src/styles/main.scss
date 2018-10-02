@@ -6,9 +6,10 @@
  * Syntaxis is: @import "route/fileName"
  */
 
-/* Base
+/* Generic
    ========================================================================== */
 
+@import "theme";
 @import "base";
 
 
@@ -16,6 +17,7 @@
    ========================================================================== */
 
 @import "utils/align";
+@import "utils/border-radius";
 @import "utils/flex";
 @import "utils/margin";
 @import "utils/measurement";

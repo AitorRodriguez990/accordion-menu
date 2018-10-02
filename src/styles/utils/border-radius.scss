@@ -1,0 +1,16 @@
+/**
+ * BORDER-RADIUS
+ */
+
+/* Reset
+   ========================================================================== */
+
+@mixin border-radius-none() { border-radius: 0; }
+
+
+/* Values
+   ========================================================================== */
+
+@mixin border-radius-top() { border-radius: 4px 4px 0 0; }
+
+@mixin border-radius-bottom() { border-radius: 0 0 4px 4px; }

@@ -1,5 +1,5 @@
-import '../styles/main.scss';
 import '../styles/normalize.css';
+import '../styles/main.scss';
 
 const ACCORDION_TITLE = "Accordion-title",
       ACCORDION_TITLE_ACTIVE = "is-active",
@@ -11,6 +11,7 @@ const ACCORDION_TITLE = "Accordion-title",
   // Remove/Add active class on target element
   const handleClickAccordionElement = (e) => {
     e.preventDefault();
+    e.stopPropagation();
 
     // Object to control max-height property on description div
     let newStyles = {

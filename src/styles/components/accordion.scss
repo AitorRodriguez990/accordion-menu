@@ -9,31 +9,39 @@
   padding: 15px;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:hover { opacity: 0.85; }
 }
 
-.Accordion-title:first-child { border-radius: 4px 4px 0 0; }
+.Accordion-title:first-child { @include border-radius-top; }
 
-.Accordion-title:last-of-type:not(.is--active) { border-radius: 0 0 4px 4px; }
+.Accordion-title:last-of-type:not(.is-active) { @include border-radius-bottom; }
 
 /* Title modifiers */ 
+
 .Accordion-title--blue {
-  background-color: #1991ff;
-  color: #fff;
+  background-color: $colorBlue;
+  color: $fontNegativeColor;
 }
 
 .Accordion-title--yellow {
-  background-color: #efbe0b;
-  color: #fff;
+  background-color: $colorYellow;
+  color: $fontColor;
 }
 
-.Accordion-title--red {
-  background-color: #f4112f;
-  color: #fff;
+.Accordion-title--salmon {
+  background-color: $colorSalmon;
+  color: $fontNegativeColor;
 }
 
 .Accordion-title--green {
-  background-color: #11f4ac;
-  color: #000;
+  background-color: $colorGreen;
+  color: $fontColor;
+}
+
+.Accordion-title--paleGreen {
+  background-color: $colorPaleGreen;
+  color: $fontColor;
 }
 
 
@@ -50,4 +58,4 @@
   transition: all 0.3s ease;
 }
 
-.Accordion-description:last-child { border-radius: 0 0 4px 4px; }
+.Accordion-description:last-child { @include border-radius-bottom; }
