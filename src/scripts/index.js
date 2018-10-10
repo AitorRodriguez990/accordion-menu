@@ -66,7 +66,7 @@ const ACCORDION_TITLE = 'Accordion-title',
     //       console.log('Error: ', xhr.status);
     //     }
     //   }
-    // };
+    // }; 
   };
 
   // Assign click function to all elements
