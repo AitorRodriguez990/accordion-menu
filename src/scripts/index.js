@@ -39,20 +39,34 @@ const ACCORDION_TITLE = 'Accordion-title',
   const getAjaxContent = () => {
     let api_url = 'https://jsonplaceholder.typicode.com/comments/5';
 
-    let xhr = new XMLHttpRequest();
-        xhr.open('GET', api_url);
-        xhr.send();
+    // Fetch api
+    fetch(api_url)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            document.getElementById('AjaxContent').nextElementSibling.innerHTML = `<p>${data.body}</p>`;
+        })
+        .catch((error) => {
+            console.log('Error: ', error);
+        });
 
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          let response = xhr.response;
-          document.getElementById('AjaxContent').nextElementSibling.innerHTML = `<p>${response}</p>`;
-        } else {
-          console.log('Error: ', xhr.status);
-        }
-      }
-    };
+    // Old way
+    // 
+    // let xhr = new XMLHttpRequest();
+    //     xhr.open('GET', api_url);
+    //     xhr.send();
+
+    // xhr.onreadystatechange = function () {
+    //   if (xhr.readyState === 4) {
+    //     if (xhr.status === 200) {
+    //       let response = xhr.response;
+    //       document.getElementById('AjaxContent').nextElementSibling.innerHTML = `<p>${response}</p>`;
+    //     } else {
+    //       console.log('Error: ', xhr.status);
+    //     }
+    //   }
+    // };
   };
 
   // Assign click function to all elements
